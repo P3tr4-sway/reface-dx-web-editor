@@ -1,0 +1,36 @@
+{
+  "name": "reface-dx-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Real-time editor server + AI CLI for the Yamaha reface DX",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/main.ts",
+    "dx": "node cli/dx.ts",
+    "web:dev": "vite web",
+    "web:build": "vite build web",
+    "test": "node --test \"test/*.test.ts\"",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p web"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@fontsource-variable/martian-mono": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@julusian/midi": "^3.8.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

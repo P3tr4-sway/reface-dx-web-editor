@@ -1,0 +1,22 @@
+# dependencies and build output
+node_modules/
+web/dist/
+
+# secrets: keep your API key in .env (copy .env.example)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# per-machine data
+data/settings.json
+data/backups/
+
+# tooling and OS
+.playwright-mcp/
+*.log
+.DS_Store
